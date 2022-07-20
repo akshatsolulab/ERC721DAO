@@ -1,8 +1,9 @@
 const { ethers } = require('hardhat');
 const hre = require('hardhat');
+const { GOVERNANCE_ADDRESS, LOCKER_ADDRESS } = require('./addresses.js');
 
-const GOVERNANCE_ADDRESS = '0x909E998d915407E4ab5672E1334aB4f73cDf9488';
-const TREASURY_ADDRESS = '0x256882400658CD84a6B4A2B1DEB808388C27dfA9';
+// const GOVERNANCE_ADDRESS = '0x909E998d915407E4ab5672E1334aB4f73cDf9488';
+// const LOCKER_ADDRESS = '0x256882400658CD84a6B4A2B1DEB808388C27dfA9';
 
 async function main() {
   [proposer, executor, vote1, vote2, vote3, vote4, vote5] =
@@ -11,20 +12,20 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.attach(GOVERNANCE_ADDRESS);
 
-  const treasury = await hre.ethers.getContractFactory('treasury');
-  const treasur = await treasury.attach(TREASURY_ADDRESS);
+  const Locker = await hre.ethers.getContractFactory('Locker');
+  const locker = await Locker.attach(LOCKER_ADDRESS);
 
   // Create proposal
   const callPropose = await governance.propose(
-    [TREASURY_ADDRESS],
+    [LOCKER_ADDRESS],
     [0],
     [
-      await treasur.interface.encodeFunctionData('withdrawFunds', [
+      await locker.interface.encodeFunctionData('withdrawFunds', [
         proposer.address,
         ethers.utils.parseUnits('1', 18),
       ]),
     ],
-    'First Proposal'
+    'Twitter Buy'
   );
   // console.log(locker.interface.encodeFunctionData('withdrawFunds', []));
 

@@ -1,10 +1,11 @@
 const { ethers } = require('hardhat');
 const hre = require('hardhat');
+const { GOVERNANCE_ADDRESS, PROPOSAL_ID } = require('./addresses.js');
 
-const GOVERNANCE_ADDRESS = '0x909E998d915407E4ab5672E1334aB4f73cDf9488';
+// const GOVERNANCE_ADDRESS = '0x909E998d915407E4ab5672E1334aB4f73cDf9488';
 
-const propId =
-  '56113563753341013731983306774901785774420486508700703586225127738144427976804';
+// const PROPOSAL_ID =
+//   '56113563753341013731983306774901785774420486508700703586225127738144427976804';
 
 async function main() {
   [proposer, executor, vote1, vote2, vote3, vote4, vote5] =
@@ -13,7 +14,7 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.attach(GOVERNANCE_ADDRESS);
 
-  const checkState = await governance.state(propId);
+  const checkState = await governance.state(PROPOSAL_ID);
   console.log(checkState);
 }
 
