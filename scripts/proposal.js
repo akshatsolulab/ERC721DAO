@@ -1,6 +1,6 @@
 const { ethers } = require('hardhat');
 const hre = require('hardhat');
-const { GOVERNANCE_ADDRESS, LOCKER_ADDRESS } = require('./addresses.js');
+const { GOVERNANCE_ADDRESS, TREASURY_ADDRESS } = require('./addresses.js');
 
 // const GOVERNANCE_ADDRESS = '0x909E998d915407E4ab5672E1334aB4f73cDf9488';
 // const LOCKER_ADDRESS = '0x256882400658CD84a6B4A2B1DEB808388C27dfA9';
@@ -12,12 +12,12 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.attach(GOVERNANCE_ADDRESS);
 
-  const Locker = await hre.ethers.getContractFactory('Locker');
-  const locker = await Locker.attach(LOCKER_ADDRESS);
+  const Locker = await hre.ethers.getContractFactory('treasury');
+  const locker = await Locker.attach(TREASURY_ADDRESS);
 
   // Create proposal
   const callPropose = await governance.propose(
-    [LOCKER_ADDRESS],
+    [TREASURY_ADDRESS],
     [0],
     [
       await locker.interface.encodeFunctionData('withdrawFunds', [

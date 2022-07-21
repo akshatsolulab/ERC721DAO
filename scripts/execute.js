@@ -11,11 +11,11 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.attach(GOVERNANCE_ADDRESS);
 
-  const Locker = await hre.ethers.getContractFactory('Locker');
-  const locker = await Locker.attach(LOCKER_ADDRESS);
+  const Locker = await hre.ethers.getContractFactory('treasury');
+  const locker = await Locker.attach(TREASURY_ADDRESS);
 
   const executePropose = await governance.execute(
-    [LOCKER_ADDRESS],
+    [TREASURY_ADDRESS],
     [0],
     [
       locker.interface.encodeFunctionData('withdrawFunds', [

@@ -1,5 +1,5 @@
 const hre = require('hardhat');
-const { GOVERNANCE_ADDRESS, LOCKER_ADDRESS } = require('./addresses.js');
+const { GOVERNANCE_ADDRESS, TREASURY_ADDRESS } = require('./addresses.js');
 
 // const GOVERNANCE_ADDRESS = '0x909E998d915407E4ab5672E1334aB4f73cDf9488';
 // const LOCKER_ADDRESS = '0x256882400658CD84a6B4A2B1DEB808388C27dfA9';
@@ -12,10 +12,10 @@ async function main() {
   const governance = Governance.attach(GOVERNANCE_ADDRESS);
 
   const Locker = await hre.ethers.getContractFactory('Locker');
-  const locker = Locker.attach(LOCKER_ADDRESS);
+  const locker = Locker.attach(TREASURY_ADDRESS);
 
   await governance.queue(
-    [LOCKER_ADDRESS],
+    [TREASURY_ADDRESS],
     [0],
     [
       locker.interface.encodeFunctionData('withdrawFunds', [

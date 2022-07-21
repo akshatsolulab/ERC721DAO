@@ -4,7 +4,7 @@ const hre = require('hardhat');
 const {
   GOVERNANCE_ADDRESS,
   PROPOSAL_ID,
-  LOCKER_ADDRESS,
+  TREASURY_ADDRESS,
 } = require('./addresses.js');
 
 // const GOVERNANCE_ADDRESS = '0x909E998d915407E4ab5672E1334aB4f73cDf9488';
@@ -20,8 +20,8 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.attach(GOVERNANCE_ADDRESS);
 
-  const Locker = await hre.ethers.getContractFactory('Locker');
-  const locker = await Locker.attach(LOCKER_ADDRESS);
+  const Locker = await hre.ethers.getContractFactory('treasury');
+  const locker = await Locker.attach(TREASURY_ADDRESS);
 
   await governance.connect(vote1).castVote(PROPOSAL_ID, 1);
   await governance.connect(vote2).castVote(PROPOSAL_ID, 1);
