@@ -1,13 +1,13 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
 
-describe('Governance', () => {
+describe('DAO Test', () => {
   let myNFT;
   let NFT;
   let TimeLock;
   let timeLock;
-  let Locker;
-  let locker;
+  let Treasury;
+  let treasury;
   let Governance;
   let governance;
   let walletAddress;
@@ -39,16 +39,16 @@ describe('Governance', () => {
 
     await governance.deployed();
 
-    // Locker Contract (wallet address for accept the ETH or withdraw)
+    // Treasury Contract (wallet address for accept the ETH or withdraw)
     walletAddress = '0xb41b7589ae02a4594cd9314f6b500b387027250b';
-    Locker = await hre.ethers.getContractFactory('treasury');
-    locker = await Locker.deploy();
+    Treasury = await hre.ethers.getContractFactory('treasury');
+    treasury = await Treasury.deploy();
 
-    await locker.deployed();
+    await treasury.deployed();
 
-    // send ether to locker
+    // send ether to treasury
     const transactionHash = await owner.sendTransaction({
-      to: locker.address,
+      to: treasury.address,
       value: ethers.utils.parseEther('1.0'),
     });
 
@@ -56,7 +56,7 @@ describe('Governance', () => {
 
     console.log(transactionHash);
 
-    await locker.transferOwnership(timeLock.address);
+    await treasury.transferOwnership(timeLock.address);
 
     await NFT.safeMint(executor.address);
     await NFT.safeMint(vote1.address);
@@ -101,10 +101,10 @@ describe('Governance', () => {
 
   it('Should propose the DAO ', async () => {
     const txnPro = await governance.propose(
-      [locker.address],
+      [treasury.address],
       [0],
       [
-        locker.interface.encodeFunctionData('withdrawFunds', [
+        treasury.interface.encodeFunctionData('withdrawFunds', [
           owner.address,
           ethers.utils.parseUnits('1', 18),
         ]),
@@ -158,10 +158,10 @@ describe('Governance', () => {
     console.log(deadline);
 
     await governance.queue(
-      [locker.address],
+      [treasury.address],
       [0],
       [
-        await locker.interface.encodeFunctionData('withdrawFunds', [
+        await treasury.interface.encodeFunctionData('withdrawFunds', [
           owner.address,
           ethers.utils.parseUnits('1', 18),
         ]),
@@ -175,10 +175,10 @@ describe('Governance', () => {
     await network.provider.send('evm_mine');
 
     await governance.execute(
-      [locker.address],
+      [treasury.address],
       [0],
       [
-        locker.interface.encodeFunctionData('withdrawFunds', [
+        treasury.interface.encodeFunctionData('withdrawFunds', [
           owner.address,
           ethers.utils.parseUnits('1', 18),
         ]),
