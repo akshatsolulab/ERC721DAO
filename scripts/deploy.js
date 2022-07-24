@@ -4,12 +4,12 @@ async function main() {
   [proposer, executor, vote1, vote2, vote3, vote4, vote5] =
     await ethers.getSigners();
 
-  const NappyNFT = await hre.ethers.getContractFactory('NappyNFT');
-  const nappyNFT = await NappyNFT.deploy();
+  const NFT = await hre.ethers.getContractFactory('NFT');
+  const NFTCont = await NFT.deploy();
 
-  await nappyNFT.deployed();
+  await NFTCont.deployed();
 
-  console.log('NappyNFT deployed to:', nappyNFT.address);
+  console.log('NFT deployed to:', NFTCont.address);
 
   const TimeLock = await hre.ethers.getContractFactory('TimeLock');
   const timeLock = await TimeLock.deploy(
@@ -24,7 +24,7 @@ async function main() {
 
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.deploy(
-    nappyNFT.address,
+    NFTCont.address,
     timeLock.address
   );
 
@@ -41,15 +41,15 @@ async function main() {
 
   await locker.transferOwnership(timeLock.address);
 
-  await nappyNFT.safeMint(vote1.address);
-  await nappyNFT.safeMint(vote2.address);
-  await nappyNFT.safeMint(vote3.address);
-  await nappyNFT.safeMint(vote4.address);
+  await NFTCont.safeMint(vote1.address);
+  await NFTCont.safeMint(vote2.address);
+  await NFTCont.safeMint(vote3.address);
+  await NFTCont.safeMint(vote4.address);
 
-  await nappyNFT.connect(vote1).delegate(vote1.address);
-  await nappyNFT.connect(vote2).delegate(vote2.address);
-  await nappyNFT.connect(vote3).delegate(vote3.address);
-  await nappyNFT.connect(vote4).delegate(vote4.address);
+  await NFTCont.connect(vote1).delegate(vote1.address);
+  await NFTCont.connect(vote2).delegate(vote2.address);
+  await NFTCont.connect(vote3).delegate(vote3.address);
+  await NFTCont.connect(vote4).delegate(vote4.address);
 
   await timeLock.grantRole(await timeLock.PROPOSER_ROLE(), governance.address);
 }
