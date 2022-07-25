@@ -134,7 +134,7 @@ It takes the address and the amount of tokens to mint as arguments.
 - Created a proposal to buy an estate.
 - Voting was done and the proposal passed.
 - Then it was queued for execution.
-- After that, the proposal was executed and agreed for the proposal.
+- After that, the proposal was executed and Actions were taken with the voting medium being an NFT.
 
 ---
 
