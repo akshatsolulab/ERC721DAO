@@ -28,7 +28,14 @@ module.exports = {
     //     mnemonic: PRIVATE_KEY,
     //   },
     // },
+  rinkeby: {
+    url: "https://rinkeby.infura.io/v3/bdc4654092594165bb49db751678af50",
+    accounts: {
+      mnemonic: PRIVATE_KEY,
+    }
+  }
   },
+
   etherscan: {
     apiKey: POLYGON_SCAN_KEY,
   },

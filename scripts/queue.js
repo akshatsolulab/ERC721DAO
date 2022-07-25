@@ -9,19 +9,19 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = Governance.attach(GOVERNANCE_ADDRESS);
 
-  const Locker = await hre.ethers.getContractFactory('Locker');
-  const locker = Locker.attach(TREASURY_ADDRESS);
+  const Treasury = await hre.ethers.getContractFactory('treasury');
+  const treasur = Treasury.attach(TREASURY_ADDRESS);
 
   await governance.queue(
     [TREASURY_ADDRESS],
     [0],
     [
-      locker.interface.encodeFunctionData('withdrawFunds', [
+      treasur.interface.encodeFunctionData('withdrawFunds', [
         proposer.address,
         ethers.utils.parseUnits('1', 18),
       ]),
     ],
-    ethers.utils.keccak256(ethers.utils.toUtf8Bytes('Twitter Buy'))
+    ethers.utils.keccak256(ethers.utils.toUtf8Bytes('Buy an Estate'))
   );
 }
 

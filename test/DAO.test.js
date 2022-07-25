@@ -17,13 +17,13 @@ describe('DAO Test', () => {
     [owner, proposer, executor, vote1, vote2, vote3, vote4, vote5] =
       await ethers.getSigners();
 
-    // myNFT contract
+    
     myNFT = await ethers.getContractFactory('NFT');
     NFT = await myNFT.deploy();
     await NFT.deployed();
     NFTAddress = NFT.address;
 
-    // TimeLock contract
+   
     TimeLock = await hre.ethers.getContractFactory('TimeLock');
     timeLock = await TimeLock.deploy(
       1,
@@ -33,7 +33,7 @@ describe('DAO Test', () => {
 
     await timeLock.deployed();
 
-    // Governance Contract
+    
     Governance = await hre.ethers.getContractFactory('Governance');
     governance = await Governance.deploy(NFT.address, timeLock.address);
 
@@ -109,7 +109,7 @@ describe('DAO Test', () => {
           ethers.utils.parseUnits('1', 18),
         ]),
       ],
-      'Twitter Buy'
+      'Buy an Estate'
     );
 
     // await network.provider.send('evm_mine');
@@ -151,11 +151,11 @@ describe('DAO Test', () => {
     console.log(state1);
 
     // latest block
-    const latestBlock = await hre.ethers.provider.getBlock('latest');
-    console.log(latestBlock);
+    // const latestBlock = await hre.ethers.provider.getBlock('latest');
+    // console.log(latestBlock);
 
-    const deadline = await governance.proposalDeadline(propId);
-    console.log(deadline);
+    // const deadline = await governance.proposalDeadline(propId);
+    // console.log(deadline);
 
     await governance.queue(
       [treasury.address],
@@ -166,7 +166,7 @@ describe('DAO Test', () => {
           ethers.utils.parseUnits('1', 18),
         ]),
       ],
-      ethers.utils.keccak256(ethers.utils.toUtf8Bytes('Twitter Buy'))
+      ethers.utils.keccak256(ethers.utils.toUtf8Bytes('Buy an Estate'))
     );
 
     const propState = await governance.state(propId);
@@ -183,9 +183,8 @@ describe('DAO Test', () => {
           ethers.utils.parseUnits('1', 18),
         ]),
       ],
-      ethers.utils.keccak256(ethers.utils.toUtf8Bytes('Twitter Buy'))
+      ethers.utils.keccak256(ethers.utils.toUtf8Bytes('Buy an Estate'))
     );
-    // expect(await governance.state());
 
     const propState1 = await governance.state(propId);
     console.log(propState1);

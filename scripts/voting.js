@@ -15,8 +15,8 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.attach(GOVERNANCE_ADDRESS);
 
-  const Locker = await hre.ethers.getContractFactory('treasury');
-  const locker = await Locker.attach(TREASURY_ADDRESS);
+  const Treasury = await hre.ethers.getContractFactory('treasury');
+  const treasur = await Treasury.attach(TREASURY_ADDRESS);
 
   await governance.connect(vote1).castVote(PROPOSAL_ID, 1);
   await governance.connect(vote2).castVote(PROPOSAL_ID, 1);

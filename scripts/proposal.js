@@ -10,22 +10,22 @@ async function main() {
   const Governance = await hre.ethers.getContractFactory('Governance');
   const governance = await Governance.attach(GOVERNANCE_ADDRESS);
 
-  const Locker = await hre.ethers.getContractFactory('treasury');
-  const locker = await Locker.attach(TREASURY_ADDRESS);
+  const Treasury = await hre.ethers.getContractFactory('treasury');
+  const treasur = await Treasury.attach(TREASURY_ADDRESS);
 
   // Create proposal
   const callPropose = await governance.propose(
     [TREASURY_ADDRESS],
     [0],
     [
-      await locker.interface.encodeFunctionData('withdrawFunds', [
+      await treasur.interface.encodeFunctionData('withdrawFunds', [
         proposer.address,
         ethers.utils.parseUnits('1', 18),
       ]),
     ],
-    'Twitter Buy'
+    'Buy an Estate'
   );
-  // console.log(locker.interface.encodeFunctionData('withdrawFunds', []));
+  // console.log(treasur.interface.encodeFunctionData('withdrawFunds', []));
 
   const txn = await callPropose.wait(1);
   // console.log(txn);

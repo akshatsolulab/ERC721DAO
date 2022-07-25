@@ -32,14 +32,14 @@ async function main() {
 
   console.log('Governance deployed to:', governance.address);
 
-  const Locker = await hre.ethers.getContractFactory('Locker');
-  const locker = await Locker.deploy();
+  const Treasury = await hre.ethers.getContractFactory('treasury');
+  const treasur = await Treasury.deploy();
 
-  await locker.deployed();
+  await treasur.deployed();
 
-  console.log('Locker deployed to:', locker.address);
+  console.log('Treasury Contract deployed to:', treasur.address);
 
-  await locker.transferOwnership(timeLock.address);
+  await treasur.transferOwnership(timeLock.address);
 
   await NFTCont.safeMint(vote1.address);
   await NFTCont.safeMint(vote2.address);
