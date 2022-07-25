@@ -2,7 +2,7 @@
 
 ## Contract: NFT.sol
 
-- Contract deployed on [ropsten test network](https://rinkeby.etherscan.io/address/0xB1939a05948BC187FEA0534977950eE90109A0d8) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0xB1939a05948BC187FEA0534977950eE90109A0d8) at:
 
 ```script
 0xB1939a05948BC187FEA0534977950eE90109A0d8
@@ -23,8 +23,7 @@ It takes the address and the amount of tokens to mint as arguments.
 ---
 
 ## Contract: Treasury.sol
-
-https://rinkeby.etherscan.io/address/0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59) at:
+- Contract deployed on [rinkeby test network] https://rinkeby.etherscan.io/address/0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59) at:
 
 ```script
 0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59
@@ -42,7 +41,7 @@ https://rinkeby.etherscan.io/address/0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59)
 
 ## Contract: TimeLock.sol
 
-- Contract deployed on [ropsten test network](https://rinkeby.etherscan.io/address/0x891a3B9fBbD3D6f926f71C38b03F112A9358dF43) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x891a3B9fBbD3D6f926f71C38b03F112A9358dF43) at:
 
 ```script
 0x891a3B9fBbD3D6f926f71C38b03F112A9358dF43
@@ -60,7 +59,7 @@ https://rinkeby.etherscan.io/address/0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59)
 
 ## Contract: Governance.sol
 
-- Contract deployed on [ropsten test network](https://rinkeby.etherscan.io/address/0x4C6048651dE6d71af045FBA709709C3437a223d9) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x4C6048651dE6d71af045FBA709709C3437a223d9) at:
 
 ```script
 0x4C6048651dE6d71af045FBA709709C3437a223d9
@@ -107,6 +106,28 @@ https://rinkeby.etherscan.io/address/0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59)
 
 ---
 ---
+
+### Screenshots
+
+- NFT Contract Deploying and delegating the authority.
+
+<img width="1440" alt="Screenshot 2022-07-25 at 3 36 34 PM" src="https://user-images.githubusercontent.com/86094155/180752497-f1890326-8494-4d8d-97fd-d9d06b667252.png">
+
+- Calling The Grant role to TimeLock Contract
+<img width="1440" alt="Screenshot 2022-07-25 at 3 36 34 PM" src="https://user-images.githubusercontent.com/86094155/180752775-061ff104-dc9a-4a1d-b8f2-a363a05bbbac.png">
+
+- Creating a Proposal in The Governacne Contract
+<img width="1440" alt="Screenshot 2022-07-25 at 3 39 55 PM" src="https://user-images.githubusercontent.com/86094155/180753067-960cd252-3e92-4531-9770-3d1b691fe73f.png">
+
+- Casting The Vote For The Proposal
+<img width="1440" alt="Screenshot 2022-07-25 at 3 41 15 PM" src="https://user-images.githubusercontent.com/86094155/180753304-52841573-423b-4d10-8af9-0a7d6c2e9da5.png">
+
+- Queueing The Proposal
+<img width="1440" alt="Screenshot 2022-07-25 at 3 42 44 PM" src="https://user-images.githubusercontent.com/86094155/180753595-805c9415-a4fe-4b68-91ce-0863063802b9.png">
+
+- Executing The Proposal
+<img width="1440" alt="Screenshot 2022-07-25 at 3 43 48 PM" src="https://user-images.githubusercontent.com/86094155/180753711-54d86174-99a7-4d9e-900f-1e30f804860e.png">
+
 
 ### Example Proposal
 
