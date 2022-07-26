@@ -29,9 +29,9 @@ It takes the address and the amount of tokens to mint as arguments.
 0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59
 ```
 
-- This contract will hold ether and ERC20 tokens and will be used to send ether or ERC20 tokens as donation to charities.
+- This contract will hold ether and ERC721 tokens and will be used to send ether or ERC721 tokens as donation to charities.
 
-- The members of the DAO can create a proposal where they can specify the receiving address and the amount of ether/ ERC20 token to send as donation.
+- The members of the DAO can create a proposal where they can specify the receiving address and the amount of ether/ ERC721 token to send as donation.
 
 - If the DAO members pass in favor of the proposal, then the said amount will be sent to the charity address.
 
