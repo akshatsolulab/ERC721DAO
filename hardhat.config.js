@@ -37,6 +37,6 @@ module.exports = {
   },
 
   etherscan: {
-    apiKey: POLYGON_SCAN_KEY,
+    apiKey: process.env.RINKEBY_SCAN_KEY,
   },
 };
