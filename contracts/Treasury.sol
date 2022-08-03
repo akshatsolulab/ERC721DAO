@@ -11,6 +11,9 @@ receive() external payable{}
     constructor()  {
     }
 
+ function balance() external view returns (uint256) {
+  return address(this).balance;
+ }
 
     function withdrawFunds(address pay, uint256 amount) public onlyOwner {
         // isReleased = true;

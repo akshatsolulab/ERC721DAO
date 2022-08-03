@@ -12,7 +12,6 @@ describe('DAO Test', () => {
   let governance;
   let walletAddress;
   let propId;
-
   beforeEach(async () => {
     [owner, proposer, executor, vote1, vote2, vote3, vote4, vote5] =
       await ethers.getSigners();
@@ -58,11 +57,11 @@ describe('DAO Test', () => {
 
     await treasury.transferOwnership(timeLock.address);
 
-    await NFT.safeMint(executor.address);
-    await NFT.safeMint(vote1.address);
-    await NFT.safeMint(vote2.address);
-    await NFT.safeMint(vote3.address);
-    await NFT.safeMint(vote4.address);
+    await NFT.safeMint(executor.address,"https://qph.cf2.quoracdn.net/main-qimg-92751987d7f1e6f35f643ba6f4050110-lq");
+    await NFT.safeMint(vote1.address, "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg");
+    await NFT.safeMint(vote2.address, "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
+    await NFT.safeMint(vote3.address, "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80");
+    await NFT.safeMint(vote4.address, "https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHdvcmt8ZW58MHx8MHx8&w=1000&q=80");
 
     await NFT.connect(executor).delegate(executor.address);
     await NFT.connect(vote1).delegate(vote1.address);
@@ -77,11 +76,11 @@ describe('DAO Test', () => {
   });
 
   it('Should mint the NFT ', async () => {
-    await NFT.safeMint(executor.address);
-    await NFT.safeMint(vote1.address);
-    await NFT.safeMint(vote2.address);
-    await NFT.safeMint(vote3.address);
-    await NFT.safeMint(vote4.address);
+    await NFT.safeMint(executor.address,"https://qph.cf2.quoracdn.net/main-qimg-92751987d7f1e6f35f643ba6f4050110-lq");
+    await NFT.safeMint(vote1.address,"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg");
+    await NFT.safeMint(vote2.address,"https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
+    await NFT.safeMint(vote3.address, "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80");
+    await NFT.safeMint(vote4.address, "https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHdvcmt8ZW58MHx8MHx8&w=1000&q=80");
   });
 
   it('Should delegate the NFT ', async () => {
