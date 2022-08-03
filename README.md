@@ -2,10 +2,10 @@
 
 ## Contract: NFT.sol
 
-- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0xB1939a05948BC187FEA0534977950eE90109A0d8) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x7FCAf057B328e06602D6D5161f8Dc3AaAde48CEb#code) at:
 
 ```script
-0xB1939a05948BC187FEA0534977950eE90109A0d8
+0x7FCAf057B328e06602D6D5161f8Dc3AaAde48CEb
 ```
 
 This contract deploys an **ERC20 token with voting rights**.
@@ -23,10 +23,10 @@ It takes the address and the amount of tokens to mint as arguments.
 ---
 
 ## Contract: Treasury.sol
-- Contract deployed on [rinkeby test network] https://rinkeby.etherscan.io/address/0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59) at:
+- Contract deployed on [rinkeby test network]https://rinkeby.etherscan.io/address/0xbad6540C58B56a49A169C802d114151CFc377DA8) at:
 
 ```script
-0x045406BA1e57fD0d30B75bF311d23e2A9bcEfE59
+0xbad6540C58B56a49A169C802d114151CFc377DA8
 ```
 
 - This contract will hold ether and ERC721 tokens and will be used to send ether or ERC721 tokens as donation to charities.
@@ -41,10 +41,10 @@ It takes the address and the amount of tokens to mint as arguments.
 
 ## Contract: TimeLock.sol
 
-- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x891a3B9fBbD3D6f926f71C38b03F112A9358dF43) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0xd918976B11C80cce43Fc8C45AF779ee178E6d723) at:
 
 ```script
-0x891a3B9fBbD3D6f926f71C38b03F112A9358dF43
+0xd918976B11C80cce43Fc8C45AF779ee178E6d723
 ```
 
 - This contract is set as the **owner of the Treasury contract**.
@@ -59,10 +59,10 @@ It takes the address and the amount of tokens to mint as arguments.
 
 ## Contract: Governance.sol
 
-- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x4C6048651dE6d71af045FBA709709C3437a223d9) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0xCb4E78d7193470A15D06eee7D51eEa44C723c0A0#code) at:
 
 ```script
-0x4C6048651dE6d71af045FBA709709C3437a223d9
+0xCb4E78d7193470A15D06eee7D51eEa44C723c0A0
 ```
 
 - This contract creates the DAO ecosystem in which an user can create a proposal and vote on it using the ERC20 BlazeToken.
