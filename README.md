@@ -111,22 +111,28 @@ It takes the address and the amount of tokens to mint as arguments.
 
 - NFT Contract Deploying and delegating the authority.
 
-<img width="1440" alt="Screenshot 2022-07-25 at 3 36 34 PM" src="https://user-images.githubusercontent.com/86094155/180752497-f1890326-8494-4d8d-97fd-d9d06b667252.png">
+<img width="1440" alt="Screenshot 2022-08-04 at 12 20 23 AM" src="https://user-images.githubusercontent.com/86094155/182686904-d6430f0e-9e12-47a7-978a-ceca9098a5a8.png">
+
 
 - Calling The Grant role to TimeLock Contract
-<img width="1440" alt="Screenshot 2022-07-25 at 3 36 34 PM" src="https://user-images.githubusercontent.com/86094155/180752775-061ff104-dc9a-4a1d-b8f2-a363a05bbbac.png">
+<img width="1440" alt="Screenshot 2022-08-04 at 12 25 04 AM" src="https://user-images.githubusercontent.com/86094155/182687321-d58f6464-0112-4b14-8af1-5963100ac983.png">
+
 
 - Creating a Proposal in The Governacne Contract
-<img width="1440" alt="Screenshot 2022-07-25 at 3 39 55 PM" src="https://user-images.githubusercontent.com/86094155/180753067-960cd252-3e92-4531-9770-3d1b691fe73f.png">
+<img width="1440" alt="Screenshot 2022-08-04 at 12 25 55 AM" src="https://user-images.githubusercontent.com/86094155/182687448-7173bb15-45ea-4f8c-b3fb-265283115112.png">
+
 
 - Casting The Vote For The Proposal
-<img width="1440" alt="Screenshot 2022-07-25 at 3 41 15 PM" src="https://user-images.githubusercontent.com/86094155/180753304-52841573-423b-4d10-8af9-0a7d6c2e9da5.png">
+<img width="1440" alt="Screenshot 2022-08-04 at 12 27 11 AM" src="https://user-images.githubusercontent.com/86094155/182687646-322b2c8e-ac7c-4fb3-a942-60065717c66b.png">
+
 
 - Queueing The Proposal
-<img width="1440" alt="Screenshot 2022-07-25 at 3 42 44 PM" src="https://user-images.githubusercontent.com/86094155/180753595-805c9415-a4fe-4b68-91ce-0863063802b9.png">
+<img width="1440" alt="Screenshot 2022-08-04 at 12 28 25 AM" src="https://user-images.githubusercontent.com/86094155/182687862-456bd177-cd44-4c6d-89b0-d2f790b0546e.png">
+
 
 - Executing The Proposal
-<img width="1440" alt="Screenshot 2022-07-25 at 3 43 48 PM" src="https://user-images.githubusercontent.com/86094155/180753711-54d86174-99a7-4d9e-900f-1e30f804860e.png">
+<img width="1440" alt="Screenshot 2022-08-04 at 12 29 12 AM" src="https://user-images.githubusercontent.com/86094155/182688002-fecd0d08-dd66-4e49-973c-9110117d2f80.png">
+
 
 
 ### Example Proposal
