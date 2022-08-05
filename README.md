@@ -8,15 +8,12 @@
 0x7B8Bc476F7f40Dcc634B9872FA4E7Eba93Ce285E
 ```
 
-This contract deploys an **ERC20 token with voting rights**.
+This contract deploys an **ERC721 token with voting rights**.
 
-- Name: "NFMyNftTokenT"
-- Symbol: "MTK"
+- Name: "NFTToken"
+- Symbol: "NTK"
 
 - This ERC721 token will be used to vote on proposals created in the DAO contract.
-
-- There is no initial supply, but the contract owner can call the **mint()** function to mint tokens to an address.
-It takes the address and the amount of tokens to mint as arguments.
 
 - Users would need to call **delegate()** function and pass their own address as argument in order to create a snapshot of their voting power, as only holding the tokens does not give an address the equivalent voting power.
 
@@ -152,6 +149,10 @@ It takes the address and the amount of tokens to mint as arguments.
 - After that, the proposal was executed and Actions were taken with the voting medium being an NFT.
 
 ---
+
+
+### LICENSE
+UNKNOWN
 
 ### Basic Sample Hardhat Project
 
