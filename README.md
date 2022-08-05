@@ -2,10 +2,10 @@
 
 ## Contract: NFT.sol
 
-- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x7FCAf057B328e06602D6D5161f8Dc3AaAde48CEb#code) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x7B8Bc476F7f40Dcc634B9872FA4E7Eba93Ce285E#code) at:
 
 ```script
-0x7FCAf057B328e06602D6D5161f8Dc3AaAde48CEb
+0x7B8Bc476F7f40Dcc634B9872FA4E7Eba93Ce285E
 ```
 
 This contract deploys an **ERC20 token with voting rights**.
@@ -23,10 +23,10 @@ It takes the address and the amount of tokens to mint as arguments.
 ---
 
 ## Contract: Treasury.sol
-- Contract deployed on [rinkeby test network]https://rinkeby.etherscan.io/address/0xbad6540C58B56a49A169C802d114151CFc377DA8) at:
+- Contract deployed on [rinkeby test network]https://rinkeby.etherscan.io/address/0x3aF185cA7444dBE1a305E618071987Fe8D85Db4F) at:
 
 ```script
-0xbad6540C58B56a49A169C802d114151CFc377DA8
+0x3aF185cA7444dBE1a305E618071987Fe8D85Db4F
 ```
 
 - This contract will hold ether and ERC721 tokens and will be used to send ether or ERC721 tokens as donation to charities.
@@ -41,10 +41,10 @@ It takes the address and the amount of tokens to mint as arguments.
 
 ## Contract: TimeLock.sol
 
-- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0xd918976B11C80cce43Fc8C45AF779ee178E6d723) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0xE789BeC0Dc64915f605326be4a361647826c9F3b) at:
 
 ```script
-0xd918976B11C80cce43Fc8C45AF779ee178E6d723
+0xE789BeC0Dc64915f605326be4a361647826c9F3b
 ```
 
 - This contract is set as the **owner of the Treasury contract**.
@@ -59,10 +59,10 @@ It takes the address and the amount of tokens to mint as arguments.
 
 ## Contract: Governance.sol
 
-- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0xCb4E78d7193470A15D06eee7D51eEa44C723c0A0#code) at:
+- Contract deployed on [rinkeby test network](https://rinkeby.etherscan.io/address/0x14eA1f366cD6c43aEA24354101b62187f26E7Ccd#code) at:
 
 ```script
-0xCb4E78d7193470A15D06eee7D51eEa44C723c0A0
+0x14eA1f366cD6c43aEA24354101b62187f26E7Ccd
 ```
 
 - This contract creates the DAO ecosystem in which an user can create a proposal and vote on it using the ERC20 BlazeToken.
@@ -111,27 +111,36 @@ It takes the address and the amount of tokens to mint as arguments.
 
 - NFT Contract Deploying and delegating the authority.
 
-<img width="1440" alt="Screenshot 2022-08-04 at 12 20 23 AM" src="https://user-images.githubusercontent.com/86094155/182686904-d6430f0e-9e12-47a7-978a-ceca9098a5a8.png">
+<img width="1440" alt="Screenshot 2022-08-05 at 12 02 49 PM" src="https://user-images.githubusercontent.com/86094155/183016132-83304ab4-dc6a-4e3e-9ef2-b2bc805fd204.png">
+
 
 
 - Calling The Grant role to TimeLock Contract
-<img width="1440" alt="Screenshot 2022-08-04 at 12 25 04 AM" src="https://user-images.githubusercontent.com/86094155/182687321-d58f6464-0112-4b14-8af1-5963100ac983.png">
+
+<img width="1440" alt="Screenshot 2022-08-05 at 12 04 54 PM" src="https://user-images.githubusercontent.com/86094155/183016370-253e3a9d-19ed-4e7d-9c72-52f8b80b40a9.png">
 
 
-- Creating a Proposal in The Governacne Contract
-<img width="1440" alt="Screenshot 2022-08-04 at 12 25 55 AM" src="https://user-images.githubusercontent.com/86094155/182687448-7173bb15-45ea-4f8c-b3fb-265283115112.png">
+
+
+- Creating a Proposal in The Governance Contract
+<img width="1440" alt="Screenshot 2022-08-05 at 12 06 24 PM" src="https://user-images.githubusercontent.com/86094155/183016634-79d50080-5e5c-4bc9-8d78-be393af3149d.png">
+
 
 
 - Casting The Vote For The Proposal
-<img width="1440" alt="Screenshot 2022-08-04 at 12 27 11 AM" src="https://user-images.githubusercontent.com/86094155/182687646-322b2c8e-ac7c-4fb3-a942-60065717c66b.png">
+<img width="1440" alt="Screenshot 2022-08-05 at 12 06 24 PM" src="https://user-images.githubusercontent.com/86094155/183016736-0ca38c49-402c-4f85-8e53-07fbc3744014.png">
+
 
 
 - Queueing The Proposal
-<img width="1440" alt="Screenshot 2022-08-04 at 12 28 25 AM" src="https://user-images.githubusercontent.com/86094155/182687862-456bd177-cd44-4c6d-89b0-d2f790b0546e.png">
+<img width="1440" alt="Screenshot 2022-08-05 at 12 07 56 PM" src="https://user-images.githubusercontent.com/86094155/183016815-9558dced-af9d-4ce2-accd-01fb9da44aee.png">
+
 
 
 - Executing The Proposal
-<img width="1440" alt="Screenshot 2022-08-04 at 12 29 12 AM" src="https://user-images.githubusercontent.com/86094155/182688002-fecd0d08-dd66-4e49-973c-9110117d2f80.png">
+<img width="1440" alt="Screenshot 2022-08-05 at 12 08 24 PM" src="https://user-images.githubusercontent.com/86094155/183016867-4823435d-df85-4154-987c-2e385fd77244.png">
+
+
 
 
 
